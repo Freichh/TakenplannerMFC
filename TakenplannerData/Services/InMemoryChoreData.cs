@@ -11,6 +11,7 @@ namespace TakenplannerData.Services
     {
         readonly List<Chore> chores;
         private static InMemoryChoreData _inMemoryChoreData;
+
         //TODO Add real database
         private InMemoryChoreData() 
         {

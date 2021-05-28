@@ -44,7 +44,8 @@ namespace TakenplannerWeb.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            var chore = new Chore();
+            return View(chore);
         }
 
         [HttpPost]
