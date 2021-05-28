@@ -23,10 +23,10 @@ namespace TakenplannerWeb.Controllers
         public ActionResult Index()
         {
             var model = new IndexViewModel();
-            model.backlogchores = db.GetAll().Where(c => c.Status == Status.Backlog);
-            model.todochores = db.GetAll().Where(c => c.Status == Status.ToDo);
-            model.doingchores = db.GetAll().Where(c => c.Status == Status.Doing);
-            model.donechores = db.GetAll().Where(c => c.Status == Status.Done);
+            model.backlogChores = db.GetAll().Where(c => c.Status == Status.Backlog);
+            model.todoChores = db.GetAll().Where(c => c.Status == Status.ToDo);
+            model.doingChores = db.GetAll().Where(c => c.Status == Status.Doing);
+            model.doneChores = db.GetAll().Where(c => c.Status == Status.Done);
             return View(model);
         }
 

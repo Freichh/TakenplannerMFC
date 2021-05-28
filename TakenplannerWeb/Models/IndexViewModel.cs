@@ -7,9 +7,9 @@ namespace TakenplannerWeb.Models
 {
     public class IndexViewModel
     {
-        public IEnumerable<TakenplannerData.Models.Chore> backlogchores { get; set; }
-        public IEnumerable<TakenplannerData.Models.Chore> todochores { get; set; }
-        public IEnumerable<TakenplannerData.Models.Chore> doingchores { get; set; }
-        public IEnumerable<TakenplannerData.Models.Chore> donechores { get; set; }
+        public IEnumerable<TakenplannerData.Models.Chore> backlogChores { get; set; }
+        public IEnumerable<TakenplannerData.Models.Chore> todoChores { get; set; }
+        public IEnumerable<TakenplannerData.Models.Chore> doingChores { get; set; }
+        public IEnumerable<TakenplannerData.Models.Chore> doneChores { get; set; }
     }
 }
