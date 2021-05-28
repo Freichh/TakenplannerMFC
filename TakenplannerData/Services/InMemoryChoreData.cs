@@ -24,7 +24,9 @@ namespace TakenplannerData.Services
                 new Chore {Id = 3, Name = "Databinding toevoegen", Description = "Databinding toevoegen aan XAML", 
                     StartDate = new DateTime(2021, 5, 24), EndDate = new DateTime(2021, 6, 30), Status = Status.Backlog },
                 new Chore {Id = 4, Name = "Project aanmaken", Description = "Project starten voor dierentuinopdracht", 
-                    StartDate = new DateTime(2021, 5, 2), EndDate = new DateTime(2021, 5, 25), Status = Status.Done }
+                    StartDate = new DateTime(2021, 5, 2), EndDate = new DateTime(2021, 5, 25), Status = Status.Done },
+                new Chore {Id = 5, Name = "Toevoegen aan Git", Description = "Repository aanmaken",
+                    StartDate = new DateTime(2021, 5, 4), EndDate = new DateTime(2021, 5, 21), Status = Status.Backlog }
             };
         }
 
