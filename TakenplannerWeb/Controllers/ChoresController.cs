@@ -27,6 +27,7 @@ namespace TakenplannerWeb.Controllers
             model.todoChores = db.GetAll().Where(c => c.Status == Status.ToDo);
             model.doingChores = db.GetAll().Where(c => c.Status == Status.Doing);
             model.doneChores = db.GetAll().Where(c => c.Status == Status.Done);
+            // expired checken Logic
             return View(model);
         }
 
@@ -44,8 +45,10 @@ namespace TakenplannerWeb.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            var chore = new Chore();
-            return View(chore);
+            var model = new Chore();
+            model.StartDate = DateTime.Now;
+            model.EndDate = DateTime.Now;
+            return View(model);
         }
 
         [HttpPost]

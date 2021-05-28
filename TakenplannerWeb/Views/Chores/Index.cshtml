@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Chores Overview</h2>
 
 <p>
     @Html.ActionLink("Add New Chore", "Create")
@@ -47,6 +47,7 @@
                 {
                     <tr>
                         <td>
+                            @* Background aanpassen, boolean.*@
                             @Html.ActionLink(item.Name, "Details", new { id = item.Id })
                         </td>
                     </tr>
