@@ -24,7 +24,7 @@ textarea {
 }
 
 /* Style for chores */
-#choresTable td {
+table .chore td {
     background-image: url("postit.png");
     background-size: 200px 200px;
     background-repeat: no-repeat;
@@ -34,6 +34,15 @@ textarea {
 
 /* Set expired td */
 td .expired {
-    background-color: red;
+    background-color: tomato;
     color: blue;
+}
+
+table .chore td a {
+    top: 35px;
+    left: 35px;
+    display: block;
+    position: relative;
+    width: 130px;
+    word-wrap: break-word;
 }

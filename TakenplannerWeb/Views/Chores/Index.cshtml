@@ -16,7 +16,7 @@
 <p>
     @Html.ActionLink("Add New Chore", "Create")
 </p>
-<table id="choresTable" class="table">
+<table class="table">
     <tr>
         <th>
             <div>Backlog</div>
@@ -33,7 +33,7 @@
     </tr>
     <tr>
         <td>
-            <table class="table backlog">
+            <table class="table chore">
                 @foreach (var item in Model.backlogChores)
                 {
                 <tr>
@@ -54,7 +54,7 @@
             </table>
         </td>
         <td>
-            <table class="table todo">
+            <table class="table chore">
                 @foreach (var item in Model.todoChores)
                 {
                 <tr>
@@ -75,7 +75,7 @@
             </table>
         </td>
         <td>
-            <table class="table doing">
+            <table class="table chore">
                 @foreach (var item in Model.doingChores)
                 {
                 <tr>
@@ -96,7 +96,7 @@
             </table>
         </td>
         <td>
-            <table class="table done">
+            <table class="table chore">
                 @foreach (var item in Model.doneChores)
                 {
                 <tr>
