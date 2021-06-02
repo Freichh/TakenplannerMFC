@@ -37,18 +37,9 @@
                 @foreach (var item in Model.backlogChores)
                 {
                 <tr>
-                    @if (item.Expired)
-                    {
-                        <td class="expired">
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
+                    <td @(item.Expired ? "class = expired" : "")>
+                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                    </td>
                 </tr>
                 }
             </table>
@@ -58,18 +49,9 @@
                 @foreach (var item in Model.todoChores)
                 {
                 <tr>
-                    @if (item.Expired)
-                    {
-                        <td class="expired">
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
+                    <td @(item.Expired ? "class = expired" : "")>
+                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                    </td>
                 </tr>
                 }
             </table>
@@ -79,18 +61,9 @@
                 @foreach (var item in Model.doingChores)
                 {
                 <tr>
-                    @if (item.Expired)
-                    {
-                        <td class="expired">
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
+                    <td @(item.Expired ? "class = expired" : "")>
+                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                    </td>
                 </tr>
                 }
             </table>
@@ -100,18 +73,9 @@
                 @foreach (var item in Model.doneChores)
                 {
                 <tr>
-                    @if (item.Expired)
-                    {
-                        <td class="expired">
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        </td>
-                    }
+                    <td @(item.Expired ? "class = expired" : "") >
+                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                    </td>
                 </tr>
                 }
             </table>
