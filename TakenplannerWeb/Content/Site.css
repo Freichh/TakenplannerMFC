@@ -22,3 +22,18 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Style for chores */
+#choresTable td {
+    background-image: url("postit.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+/* Set expired td */
+td .expired {
+    background-color: red;
+    color: blue;
+}

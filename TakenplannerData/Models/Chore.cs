@@ -22,5 +22,6 @@ namespace TakenplannerData.Models
         [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
         public Status Status { get; set; }
+        public bool Expired { get; set; }
     }
 }

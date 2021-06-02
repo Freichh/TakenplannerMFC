@@ -6,18 +6,21 @@ using TakenplannerData.Models;
 
 namespace TakenplannerWeb.Logic
 {
-    public class Logic
+    public class choresLogic
     {
         //TODO Logic implementeren
         // background color red / green. Boolean gebruiken
-        public static void CheckExpiredChores(List<Chore> chores)
+        public static void CheckExpiredChores(IEnumerable<Chore> chores)
         {
-            //DateTime currentTime = DateTime.Now;
             foreach (var chore in chores)
             {
                 if (chore.StartDate < DateTime.Now)
                 {
-                    // Boolean aanpassen.
+                    chore.Expired = true;
+                }
+                if (chore.StartDate >= DateTime.Now)
+                {
+                    chore.Expired = false;
                 }
             }
         }

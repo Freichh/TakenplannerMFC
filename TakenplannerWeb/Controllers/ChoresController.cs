@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using TakenplannerData.Services;
 using TakenplannerData.Models;
 using TakenplannerWeb.Models;
+using TakenplannerWeb.Logic;
 
 namespace TakenplannerWeb.Controllers
 {
@@ -23,11 +24,14 @@ namespace TakenplannerWeb.Controllers
         public ActionResult Index()
         {
             var model = new IndexViewModel();
-            model.backlogChores = db.GetAll().Where(c => c.Status == Status.Backlog);
-            model.todoChores = db.GetAll().Where(c => c.Status == Status.ToDo);
-            model.doingChores = db.GetAll().Where(c => c.Status == Status.Doing);
-            model.doneChores = db.GetAll().Where(c => c.Status == Status.Done);
-            // expired checken Logic
+            model.allChores = db.GetAll();
+            choresLogic.CheckExpiredChores(model.allChores);
+            model.expiredChores = model.allChores.Where(c => c.Expired == true).ToList();
+            model.backlogChores = model.allChores.Where(c => c.Status == Status.Backlog);
+            model.todoChores = model.allChores.Where(c => c.Status == Status.ToDo);
+            model.doingChores = model.allChores.Where(c => c.Status == Status.Doing);
+            model.doneChores = model.allChores.Where(c => c.Status == Status.Done);
+            
             return View(model);
         }
 
