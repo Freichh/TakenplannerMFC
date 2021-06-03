@@ -87,6 +87,7 @@ namespace TakenplannerWeb.Controllers
             if (ModelState.IsValid)
             {
                 db.Update(chore);
+                TempData["Message"] = "You have saved the chore!";
                 return RedirectToAction("Details", new { id = chore.Id });
             }
             return View(chore);
