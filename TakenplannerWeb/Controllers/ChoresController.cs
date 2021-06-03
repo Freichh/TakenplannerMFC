@@ -147,7 +147,7 @@ namespace TakenplannerWeb.Controllers
                 }
 
                 db.UpdateNote(chore);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = chore.Id });
             }
             return View(chore);
         }

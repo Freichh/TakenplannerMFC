@@ -63,11 +63,8 @@
         <dd>
             @Html.DisplayFor(model => model.FilePath)
         </dd>
-        <dt>
-            Download
-        </dt>
         <dd>
-            <a href="path_to_file" download="d">Download</a>
+            <a href="@Html.DisplayFor(model => model.FilePath)" download> Download </a>
         </dd>
 
 
