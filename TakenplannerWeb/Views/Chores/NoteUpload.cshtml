@@ -4,10 +4,10 @@
     ViewBag.Title = "NoteUpload";
 }
 
-<h2>NoteUpload</h2>
+<h2>Note or File Upload</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -26,10 +26,9 @@
         </div>
     </div>
 
-    <form action="/action_page.php">
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
-    </form>
+    <div action="/action_page.php" class="form-group">
+        <input class="col-md-offset-2 col-md-10" type="file" id="myFile" name="filename">
+    </div>
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
