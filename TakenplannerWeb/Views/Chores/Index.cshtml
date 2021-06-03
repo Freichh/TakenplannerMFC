@@ -38,13 +38,7 @@
             <table class="table chore">
                 @foreach (var item in Model.backlogChores)
                 {
-                <tr>
-                    <td @(item.Expired ? "class = expired" : "")@(item.AlmostExpired ? "class = almostExpired" : "")>
-                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        @Html.ActionLink("Notitie", "NoteUpload", new { id = item.Id })
-                        <div>@item.Note</div>
-                    </td>
-                </tr>
+                    @Html.Partial("_Chore", item)
                 }
             </table>
         </td>
@@ -52,13 +46,7 @@
             <table class="table chore">
                 @foreach (var item in Model.todoChores)
                 {
-                <tr>
-                    <td @(item.Expired ? "class = expired" : "") @(item.AlmostExpired ? "class = almostExpired" : "")>
-                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        @Html.ActionLink("Notitie", "NoteUpload", new { id = item.Id })
-                        <div>@item.Note</div>
-                    </td>
-                </tr>
+                    @Html.Partial("_Chore", item)
                 }
             </table>
         </td>
@@ -66,13 +54,7 @@
             <table class="table chore">
                 @foreach (var item in Model.doingChores)
                 {
-                <tr>
-                    <td @(item.Expired ? "class = expired" : "") @(item.AlmostExpired ? "class = almostExpired" : "")>
-                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        @Html.ActionLink("Notitie", "NoteUpload", new { id = item.Id})
-                        <div>@item.Note</div>
-                    </td>
-                </tr>
+                    @Html.Partial("_Chore", item)
                 }
             </table>
         </td>
@@ -80,13 +62,7 @@
             <table class="table chore">
                 @foreach (var item in Model.doneChores)
                 {
-                <tr>
-                    <td @(item.Expired ? "class = expired" : "") @(item.AlmostExpired ? "class = almostExpired" : "")>
-                        @Html.ActionLink(item.Name, "Details", new { id = item.Id })
-                        @Html.ActionLink("Notitie", "NoteUpload", new { id = item.Id })
-                        <div>@item.Note</div>
-                    </td>
-                </tr>
+                    @Html.Partial("_Chore", item)
                 }
             </table>
         </td>

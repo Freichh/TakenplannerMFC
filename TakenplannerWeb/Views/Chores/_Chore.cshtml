@@ -1,0 +1,9 @@
+﻿@model TakenplannerData.Models.Chore
+
+<tr>
+    <td @(Model.Expired ? "class = expired" : "") @(Model.AlmostExpired ? "class = almostExpired" : "")>
+        @Html.ActionLink(Model.Name, "Details", new { id = Model.Id })
+        @Html.ActionLink("Notitie", "NoteUpload", new { id = Model.Id })
+        <div>@Model.Note</div>
+    </td>
+</tr>
