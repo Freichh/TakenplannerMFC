@@ -227,6 +227,7 @@
     <Content Include="Views\Chores\Create.cshtml" />
     <Content Include="Views\Chores\Edit.cshtml" />
     <Content Include="Views\Chores\Delete.cshtml" />
+    <Content Include="Views\Chores\NoteUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\" />

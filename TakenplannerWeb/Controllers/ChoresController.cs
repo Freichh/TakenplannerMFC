@@ -33,7 +33,7 @@ namespace TakenplannerWeb.Controllers
             model.todoChores = model.allChores.Where(c => c.Status == Status.ToDo);
             model.doingChores = model.allChores.Where(c => c.Status == Status.Doing);
             model.doneChores = model.allChores.Where(c => c.Status == Status.Done);
-            
+
             return View(model);
         }
 
@@ -93,7 +93,7 @@ namespace TakenplannerWeb.Controllers
         }
 
         [HttpGet]
-        public ActionResult Delete(int id) 
+        public ActionResult Delete(int id)
         {
             var model = db.Get(id);
             if (model == null)
@@ -110,5 +110,15 @@ namespace TakenplannerWeb.Controllers
             db.Delete(id);
             return RedirectToAction("Index");
         }
-    }
+
+        [HttpGet]
+        public ActionResult NoteUpload(int id)
+        {
+            var model = db.Get(id);
+            if (model == null)
+            {
+                return View("NotFound");
+            }
+            return View(model);
+        }
 }
