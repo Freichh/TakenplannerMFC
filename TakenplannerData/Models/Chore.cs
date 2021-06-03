@@ -29,7 +29,7 @@ namespace TakenplannerData.Models
 
         [DisplayName("Upload File")]
         public string FilePath { get; set; }
-        public HttpPostedFileBase UploadedFile {get; set;}
+        public HttpPostedFile UploadedFile {get; set;}
 
     }
 }
