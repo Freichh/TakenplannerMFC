@@ -234,6 +234,7 @@
   <ItemGroup>
     <Folder Include="Api\" />
     <Folder Include="App_Data\" />
+    <Folder Include="UserFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

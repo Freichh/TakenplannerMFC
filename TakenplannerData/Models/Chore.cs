@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -25,8 +26,10 @@ namespace TakenplannerData.Models
         public Status Status { get; set; }
         public bool Expired { get; set; }
         public bool AlmostExpired { get; set; }
+
+        [DisplayName("Upload File")]
         public string FilePath { get; set; }
-        public HttpPostedFile UploadedFile {get; set;}
+        public HttpPostedFileBase UploadedFile {get; set;}
 
     }
 }

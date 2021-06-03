@@ -7,6 +7,8 @@ using TakenplannerData.Services;
 using TakenplannerData.Models;
 using TakenplannerWeb.Models;
 using TakenplannerWeb.Logic;
+using System.IO;
+using System.Configuration;
 
 namespace TakenplannerWeb.Controllers
 {
@@ -128,6 +130,21 @@ namespace TakenplannerWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (chore.UploadedFile != null)
+                {
+                    string FileName = Path.GetFileNameWithoutExtension(chore.UploadedFile.FileName);
+
+                    string FileExtension = Path.GetExtension(chore.UploadedFile.FileName);
+
+                    FileName = DateTime.Now.ToString("yyyyMMdd") + "-" + FileName.Trim() + FileExtension;
+
+                    string UploadPath = ConfigurationManager.AppSettings["UserFilePath"].ToString();
+
+                    chore.FilePath = UploadPath + FileName;
+
+                    chore.UploadedFile.SaveAs(chore.FilePath); 
+                }
+
                 db.UpdateNote(chore);
                 return RedirectToAction("Index");
             }
