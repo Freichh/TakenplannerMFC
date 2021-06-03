@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace TakenplannerData.Models
 {
@@ -24,6 +25,8 @@ namespace TakenplannerData.Models
         public Status Status { get; set; }
         public bool Expired { get; set; }
         public bool AlmostExpired { get; set; }
+        public string FilePath { get; set; }
+        public HttpPostedFile UploadedFile {get; set;}
 
     }
 }
