@@ -12,11 +12,11 @@ namespace TakenplannerWeb.Logic
         {
             foreach (var chore in chores)
             {
-                if (chore.StartDate < DateTime.Now)
+                if (chore.EndDate < DateTime.Now)
                 {
                     chore.Expired = true;
                 }
-                if (chore.StartDate >= DateTime.Now)
+                if (chore.EndDate >= DateTime.Now)
                 {
                     chore.Expired = false;
                 }
@@ -28,11 +28,11 @@ namespace TakenplannerWeb.Logic
             foreach (var chore in chores)
             {
                 TimeSpan remainingTime = chore.EndDate - DateTime.Now;
-                if (remainingTime.Days <= 3)
+                if (remainingTime.Days <= 3 && remainingTime.Days > 0)
                 {
                     chore.AlmostExpired = true;
                 }
-                if (remainingTime.Days > 3)
+                else
                 {
                     chore.AlmostExpired = false;
                 }

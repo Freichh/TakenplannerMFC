@@ -54,6 +54,7 @@ namespace TakenplannerData.Services
             {
                 existing.Name = chore.Name;
                 existing.Description = chore.Description;
+                existing.Note = chore.Note;
                 existing.StartDate = chore.StartDate;
                 existing.EndDate = chore.EndDate;
                 existing.Status = chore.Status;
