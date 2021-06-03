@@ -61,6 +61,15 @@ namespace TakenplannerData.Services
             }
         }
 
+        public void UpdateNote(Chore chore)
+        {
+            var existing = Get(chore.Id);
+            if (existing != null)
+            {
+                existing.Note = chore.Note;
+            }
+        }
+
         public Chore Get(int Id)
         {
             return chores.FirstOrDefault(r => r.Id == Id);

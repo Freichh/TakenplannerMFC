@@ -121,4 +121,17 @@ namespace TakenplannerWeb.Controllers
             }
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult NoteUpload(Chore chore)
+        {
+            if (ModelState.IsValid)
+            {
+                db.UpdateNote(chore);
+                return RedirectToAction("Index");
+            }
+            return View(chore);
+        }
+    }
 }

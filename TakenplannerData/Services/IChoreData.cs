@@ -14,5 +14,6 @@ namespace TakenplannerData.Services
         void Add(Chore chore);
         void Update(Chore chore);
         void Delete(int Id);
+        void UpdateNote(Chore chore);
     }
 }
