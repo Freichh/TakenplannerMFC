@@ -28,7 +28,7 @@ namespace TakenplannerWeb.Logic
             foreach (var chore in chores)
             {
                 TimeSpan remainingTime = chore.EndDate - DateTime.Now;
-                if (remainingTime.Days <= 3)
+                if (remainingTime.Days <= 3 && remainingTime.Days > 0)
                 {
                     chore.AlmostExpired = true;
                 }
