@@ -41,6 +41,8 @@
                 <tr>
                     <td @(item.Expired ? "class = expired" : "")>
                         @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                        @Html.ActionLink("Notitie", "Edit", new { id = item.Id })
+                        <div>@item.Note</div>
                     </td>
                 </tr>
                 }
@@ -53,6 +55,8 @@
                 <tr>
                     <td @(item.Expired ? "class = expired" : "")>
                         @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                        @Html.ActionLink("Notitie", "Edit", new { id = item.Id })
+                        <div>@item.Note</div>
                     </td>
                 </tr>
                 }
@@ -65,6 +69,8 @@
                 <tr>
                     <td @(item.Expired ? "class = expired" : "")>
                         @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                        @Html.ActionLink("Notitie", "Edit", new { id = item.Id})
+                        <div>@item.Note</div>
                     </td>
                 </tr>
                 }
@@ -75,8 +81,10 @@
                 @foreach (var item in Model.doneChores)
                 {
                 <tr>
-                    <td @(item.Expired ? "class = expired" : "") >
+                    <td @(item.Expired ? "class = expired" : "")>
                         @Html.ActionLink(item.Name, "Details", new { id = item.Id })
+                        @Html.ActionLink("Notitie", "Edit", new { id = item.Id })
+                        <div>@item.Note</div>
                     </td>
                 </tr>
                 }
