@@ -67,6 +67,8 @@ namespace TakenplannerData.Services
             if (existing != null)
             {
                 existing.Note = chore.Note;
+                existing.UploadedFile = chore.UploadedFile;
+                existing.FilePath = chore.FilePath;
             }
         }
 
