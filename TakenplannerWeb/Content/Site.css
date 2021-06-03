@@ -32,10 +32,12 @@ table .chore td {
     height: 200px;
 }
 
-/* Set expired td */
-td .expired {
-    background-color: tomato;
-    color: blue;
+table .chore td.expired {
+    background-image: url("postit_expired.png");
+}
+
+table .chore td.almostExpired {
+    background-image: url("postit_almostExpired.png");
 }
 
 table .chore td a {

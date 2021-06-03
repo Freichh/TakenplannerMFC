@@ -138,6 +138,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\postit.png" />
+    <Content Include="Content\postit_almostExpired.png" />
+    <Content Include="Content\postit_expired.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
