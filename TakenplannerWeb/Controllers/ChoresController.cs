@@ -142,7 +142,7 @@ namespace TakenplannerWeb.Controllers
 
                     chore.FilePath = UploadPath + FileName;
 
-                    chore.UploadedFile.SaveAs(chore.FilePath); 
+                    chore.UploadedFile.SaveAs(Server.MapPath(chore.FilePath)); 
                 }
 
                 db.UpdateNote(chore);
