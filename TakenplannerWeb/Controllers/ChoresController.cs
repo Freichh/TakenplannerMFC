@@ -26,7 +26,9 @@ namespace TakenplannerWeb.Controllers
             var model = new IndexViewModel();
             model.allChores = db.GetAll();
             choresLogic.CheckExpiredChores(model.allChores);
+            choresLogic.CheckAlmostExpiredChores(model.allChores);
             model.expiredChores = model.allChores.Where(c => c.Expired == true).ToList();
+            model.almostExpiredChores = model.allChores.Where(c => c.AlmostExpired == true).ToList();
             model.backlogChores = model.allChores.Where(c => c.Status == Status.Backlog);
             model.todoChores = model.allChores.Where(c => c.Status == Status.ToDo);
             model.doingChores = model.allChores.Where(c => c.Status == Status.Doing);

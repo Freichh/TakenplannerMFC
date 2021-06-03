@@ -6,12 +6,14 @@
 
 <h2>Chores Overview</h2>
 
-<p>There are @Model.allChores.Count() number of chores!</p>
-<p style="color: red">There are @Model.expiredChores.Count() number of expired chores!</p>
-<p>There are @Model.backlogChores.Count() number of Backlog chores!</p>
-<p>There are @Model.todoChores.Count() number of ToDo chores!</p>
-<p>There are @Model.doingChores.Count() number of Doing chores!</p>
-<p>There are @Model.doneChores.Count() number of Done chores!</p>
+@if (Model.expiredChores.Count() > 0)
+{
+    <p style="color: red">There are @Model.expiredChores.Count() number of expired chores!</p>
+}
+@if (Model.almostExpiredChores.Count() > 0)
+{
+    <p style="color: red">@Model.almostExpiredChores.Count() number of chores are almost expired!</p>
+}
 
 <p>
     @Html.ActionLink("Add New Chore", "Create")

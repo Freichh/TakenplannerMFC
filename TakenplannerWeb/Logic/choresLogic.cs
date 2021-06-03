@@ -8,8 +8,6 @@ namespace TakenplannerWeb.Logic
 {
     public class choresLogic
     {
-        //TODO Logic implementeren
-        // background color red / green. Boolean gebruiken
         public static void CheckExpiredChores(IEnumerable<Chore> chores)
         {
             foreach (var chore in chores)
@@ -21,6 +19,22 @@ namespace TakenplannerWeb.Logic
                 if (chore.StartDate >= DateTime.Now)
                 {
                     chore.Expired = false;
+                }
+            }
+        }        
+        
+        public static void CheckAlmostExpiredChores(IEnumerable<Chore> chores)
+        {
+            foreach (var chore in chores)
+            {
+                TimeSpan remainingTime = chore.EndDate - DateTime.Now;
+                if (remainingTime.Days <= 3)
+                {
+                    chore.AlmostExpired = true;
+                }
+                if (remainingTime.Days > 3)
+                {
+                    chore.AlmostExpired = false;
                 }
             }
         }

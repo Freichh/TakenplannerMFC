@@ -23,5 +23,7 @@ namespace TakenplannerData.Models
         public DateTime EndDate { get; set; }
         public Status Status { get; set; }
         public bool Expired { get; set; }
+        public bool AlmostExpired { get; set; }
+
     }
 }
