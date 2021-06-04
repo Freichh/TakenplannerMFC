@@ -6,13 +6,21 @@
 
 <h2>Chores Overview</h2>
 
-@if (Model.expiredChores.Count() > 0)
+@if (Model.expiredChores.Count() > 1)
 {
-    <p style="color: red">There are @Model.expiredChores.Count() number of expired chores!</p>
+    <p style="color: red">There are @Model.expiredChores.Count() expired chores!</p>
 }
-@if (Model.almostExpiredChores.Count() > 0)
+@if (Model.expiredChores.Count() > 0 && Model.expiredChores.Count() < 2)
 {
-    <p style="color: red">@Model.almostExpiredChores.Count() number of chores are almost expired!</p>
+    <p style="color: red">There is @Model.expiredChores.Count() expired chore!</p>
+}
+@if (Model.almostExpiredChores.Count() > 0 && Model.almostExpiredChores.Count() < 2)
+{
+    <p style="color: red">@Model.almostExpiredChores.Count() chore is almost expired!</p>
+}
+@if (Model.almostExpiredChores.Count() > 1)
+{
+    <p style="color: red">@Model.almostExpiredChores.Count() chores are almost expired!</p>
 }
 
 <p>

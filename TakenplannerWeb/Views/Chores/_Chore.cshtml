@@ -3,7 +3,8 @@
 <tr>
     <td @(Model.Expired ? "class = expired" : "") @(Model.AlmostExpired ? "class = almostExpired" : "")>
         @Html.ActionLink(Model.Name, "Details", new { id = Model.Id })
+        <br/>
         @Html.ActionLink("Notitie of File upload", "NoteUpload", new { id = Model.Id })
-        <div>@Model.Note</div>
+        <div><i>@Model.Note</i></div>
     </td>
 </tr>

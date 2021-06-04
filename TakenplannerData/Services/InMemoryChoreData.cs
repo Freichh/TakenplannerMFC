@@ -28,7 +28,11 @@ namespace TakenplannerData.Services
                 new Chore {Id = 5, Name = "Toevoegen aan Git", Description = "Repository aanmaken",
                     StartDate = new DateTime(2021, 8, 4), EndDate = new DateTime(2021, 8, 21), Status = Status.Backlog },
                 new Chore {Id = 6, Name = "Comitten", Description = "Mergen naar master",
-                    StartDate = new DateTime(2021, 6, 4), EndDate = new DateTime(2021, 6, 5), Status = Status.Doing }
+                    StartDate = new DateTime(2021, 6, 4), EndDate = new DateTime(2021, 6, 5), Status = Status.Doing },
+                new Chore {Id = 7, Name = "Refactoren", Description = "Mergen naar branch",
+                    StartDate = new DateTime(2021, 5, 2), EndDate = new DateTime(2021, 6, 5), Status = Status.ToDo },
+                new Chore {Id = 8, Name = "Water drinken", Description = "Zeker bij warm weer",
+                    StartDate = new DateTime(2021, 5, 2), EndDate = new DateTime(2021, 6, 1), Status = Status.Backlog }
             };
         }
 
